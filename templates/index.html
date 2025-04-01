@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Plagiarism Detector</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🧑‍💻 Academic Plagiarism Detector</h1>
+        <p>Upload a ZIP file containing multiple PDF documents to detect plagiarism efficiently.</p>
+
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="zip-file">📤 Upload ZIP File</label>
+            <input type="file" id="zip-file" name="file" accept=".zip" required>
+            <button type="submit">🚀 Start Processing</button>
+        </form>
+
+        <div id="file-count" class="hidden"></div>
+        
+        <div id="progress-container" class="hidden">
+            <progress id="progress-bar" value="0" max="100"></progress>
+            <span id="progress-text">0%</span>
+        </div>
+
+        <div id="processing" class="hidden">⏳ Processing your files. Please wait...</div>
+
+        <div id="results" class="hidden">
+            <h2>📑 Plagiarism Results</h2>
+            <div id="plagiarism-detected"></div>
+            <div id="no-plagiarism"></div>
+        </div>
+    </div>
+
+</body>
+</html>
