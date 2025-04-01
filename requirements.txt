@@ -1,0 +1,12 @@
+numpy
+pymupdf
+easyocr
+flask
+pymupdf
+flask-socketio
+easyocr
+--index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+
+
